@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<section data-ng-controller="ExperiencesController">
+    <center>
+    <h1>Add Experience</h1>
+    <form data-ng-submit="create()" novalidate id="form1">
+        <div>
+         <h2>   <label for="companyName">Company Name</label> </h2>
+            <div>
+                <input type="text" data-ng-model="companyName" id="companyName" placeholder="companyName" required size="30">
+            </div>
+        </div>
+        
+         <div>
+    <h2>        <label for="city">City</label> </h2>
+            <div>
+                <input type="text" data-ng-model="city" id="city" placeholder="city" required required size="30">
+            </div>
+        </div>
+           <div>
+    <h2>        <label for="country">Country</label> </h2>
+            <div>
+                <input type="text" data-ng-model="country" id="country" placeholder="country" required required size="30">
+            </div>
+        </div>
+        
+         <div>
+   <h2>         <label for="startDate">Start Date</label> </h2>
+            <div>
+                <input type="date" data-ng-model="startDate" id="startDate"  required >
+            </div>
+        </div>
+        
+         <div>
+   <h2>         <label for="endDate">End Date</label> </h2>
+            <div>
+                <input type="date" data-ng-model="endDate" id="endDate"  required  >
+            </div>
+        </div>
+            <div>
+ <h2>           <label for="position">Position</label> </h2>
+            <div>
+                <input type="text" data-ng-model="position" id="position" placeholder="position" required required size="30">
+            </div>
+        </div>
+      
+         <div>
+ <h2>           <label for="detail">Detail</label> </h2>
+            <div>
+                <input type="text" data-ng-model="detail" id="detail" placeholder="detail" required required size="30">
+            </div>
+        </div>
+        <br> <br> 
+        <div>
+            <input type="submit" value="Add Experience">
+        </div> <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+           </form>
+    </center>
+</section>

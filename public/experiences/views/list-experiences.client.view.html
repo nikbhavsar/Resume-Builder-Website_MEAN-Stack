@@ -1,0 +1,65 @@
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<section data-ng-controller="ExperiencesController" data-ng-init="find()">
+    <center>
+        <h1>experiences</h1>
+        <ul>
+
+            <li data-ng-repeat="experience in experiences">
+
+                <h2>     <a data-ng-href="#!/experiences/{{experience._id}}" data-ng-bind="experience.companyName"></a> </h2>
+                <br>
+                <small data-ng-bind="experience.created | date:'medium'"></small>
+
+
+                <table border="1" background="/img/back.jpg">
+
+                    <tr>
+                        <td>
+                            <h2> <em>Company Name :</em> </h2> </td>
+                        <td>
+                            <h3> <em data-ng-bind="experience.companyName| date:'mediumDate'"></em> </h3> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>	<em>City :</em> </h2></td>
+                        <td>
+                            <h3> <em data-ng-bind="experience.city"></em> </h3></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>     <em>Country :</em>  </h2> </td>
+                        <td>
+                            <h3>	<em data-ng-bind="experience.country"></em> </h3></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>    <em>Start Date :</em> </h2></td>
+                        <td>
+                            <h3> <em data-ng-bind="experience.startDate"></em> </h3></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>    <em>End Date :</em> </h2> </td>
+                        <td>
+                            <h3>	<em data-ng-bind="experience.endDate"></em> </h3></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>    <em>Position :</em> </h2></td>
+                        <td>
+                            <h3>	<em data-ng-bind="experience.position"></em> </h3></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>    <em>Details :</em> </h2></td>
+                        <td>
+                            <h3> <em data-ng-bind="experience.detail"></em></h3></td>
+                    </tr>
+                </table>
+            </li>
+
+        </ul>
+    </center>
+    <div data-ng-hide="!experiences || experiences.length">No Experience yet, why don't you <a href="/#!/experiences/create">create one</a>?</div>
+
+</section>

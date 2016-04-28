@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title><%=title%></title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <section ng-view></section>
+    <script>
+     window.user = <%- user || 'null' %>;
+     </script>
+    
+    <script type="text/javascript" src="/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="/experiences/experiences.client.module.js"></script>
+    <script type="text/javascript" src="/experiences/controllers/experiences.client.controller.js"></script>
+    <script type="text/javascript" src="/experiences/services/experiences.client.service.js"></script>
+    <script type="text/javascript" src="/experiences/config/experiences.client.routes.js"></script>
+    <script type="text/javascript" src="/example/example.client.module.js"></script>
+    <script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+    <script type="text/javascript" src="/application.js"></script>
+    <script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+    <script type="text/javascript" src="/students/students.client.module.js"></script>
+    <script type="text/javascript" src="/students/services/authentication.client.service.js"></script>
+</body>
+</html>

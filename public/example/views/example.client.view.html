@@ -1,0 +1,48 @@
+<section ng-controller="ExampleController">
+
+
+
+    <div data-ng-show="!authentication.user">
+        <header>
+
+            <nav class="clear">
+
+                <ul>
+                    <li><a href="/signup">Signup</a></li>
+                    <li><a href="/signin">Signin</a></li>
+                </ul>
+
+            </nav>
+        </header>
+        <center> <img src="/img/image.png" / height="500" width="400"> </center>
+    </div>
+
+
+
+    <div data-ng-show="authentication.user">
+
+        <center>
+            <h1>Welcome 
+                <div> <span data-ng-bind="authentication.user.fullName"></span> </div></h1> </center>
+        <header>
+
+            <nav class="clear">
+
+                <ul>
+
+                  <li>  <a href="/signout">Signout</a> </li>
+                    
+
+                </ul>
+            </nav>
+        </header>
+
+        <center>
+            <img src="/img/image.png" / height="250" width="500">
+            <ul>
+                <h2> <li><a href="/#!/experiences"><b>List Experience Detail </b></a></li>  </h2>
+                <h2>    <li><a href="/#!/experiences/create"><b>Add Experience</b></a></li> </h2>
+            </ul>
+        </center>
+    </div>
+</section>

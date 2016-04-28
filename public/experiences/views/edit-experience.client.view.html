@@ -1,0 +1,57 @@
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<section data-ng-controller="ExperiencesController" data-ng-init="findOne()">
+   <center>
+    <h1>Edit Experience</h1>
+    <form data-ng-submit="update()" novalidate>
+        <div>
+             <h2>      <label for="companyName">Company Name</label> </h2>
+            <div>
+         <input type="text" data-ng-model="experience.companyName" id="companyName" placeholder="companyName" required size="30"> 
+            </div>
+        </div>
+        <div>
+            <h2>       <label for="city">City</label> </h2>
+            <div>
+                <input type="text" data-ng-model="experience.city" id="city" placeholder="city" required size="30">
+            </div>
+        </div>
+        <div>
+          <h2>         <label for="country">Country</label> </h2>
+            <div>
+                <input type="text" data-ng-model="experience.country" id="country" placeholder="country" required size="30">
+            </div>
+        </div>
+        <div>
+            <h2>       <label for="startDate">Start Date</label> </h2>
+            <div>
+                <input type="text" data-ng-model="experience.startDate" id="startDate" placeholder="startDate" required size="30">
+            </div>
+        </div>
+        <div>
+          <h2>         <label for="endDate">End Date</label> </h2>
+            <div>
+                <input type="text" data-ng-model="experience.endDate" id="endDate" placeholder="endDate" required size="30">
+            </div>
+        </div>
+        <div>
+              <h2>     <label for="position">Position</label> </h2>
+            <div>
+                <input type="text" data-ng-model="experience.position" id="position" placeholder="position" required size="30">
+            </div>
+        </div>
+        <div>
+           <h2>        <label for="detail">Detail</label> </h2>
+            <div>
+                <input type="text" data-ng-model="experience.detail" id="detail" placeholder="detail" required size="30">
+            </div>
+        </div>
+        <br> <br>
+        <div>
+            <input type="submit" value="Update">
+        </div>
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+    </center>
+</section>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+
+<%=title %>
+</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<center>
+<h1> Sign In </h1>
+
+<% for(var i in messages) { %>
+<div class="flash"><%= messages[i] %></div>
+<% } %>
+<form action="/signin" method="post">
+<div>
+<h2><label>Student Number:</label> </h2>
+
+<input type="text" name="username" />
+</div>
+<div>
+<h2><label>Password:</label></h2>
+<input type="password" name="password" /> 
+</div>
+<br>
+<div>
+<input type="submit" value="Sign In" />
+</div>
+</form>
+</center>
+</body>
+</html>
